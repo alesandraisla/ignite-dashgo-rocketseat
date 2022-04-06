@@ -1,5 +1,5 @@
-import { Flex, Text, Input, Icon } from "@chakra-ui/react"
-import { RiSearch2Line } from 'react-icons/ri'
+import { Flex, Text, Input, Icon, HStack, Box, Avatar } from "@chakra-ui/react"
+import { RiNotificationLine, RiSearch2Line, RiUser2Line } from 'react-icons/ri'
 
 export function Header() {
     return(
@@ -44,6 +44,36 @@ export function Header() {
                     _placeholder={{color: 'gray.400'}}    
                 />
                 <Icon as={RiSearch2Line} fontSize="20" />
+            </Flex>
+            <Flex
+                align="center"
+                ml="auto"
+            >
+                <HStack
+                    spacing="8"
+                    mx="8"
+                    pr="8"
+                    py="1"
+                    color="gray.300"
+                    borderRightWidth={1}
+                    borderColor="gray.700"    
+                >
+                    <Icon as={RiNotificationLine} fontSize="20"/>
+                    <Icon as={RiUser2Line} fontSize="20"/>
+                </HStack>
+                <Flex align="center">
+                    <Box mr="4" textAlign="right">
+                        <Text>Alesandra Mempis</Text>
+                        <Text color="gray.300" fontSize="small">
+                            alesandramempis@gmail.com
+                        </Text>
+                    </Box>
+                    <Avatar 
+                        size="md" 
+                        name="Alesandra Mempis" 
+                        src="https://avatars.githubusercontent.com/u/69330371?s=400&u=faec0d6656d8575ec4f2f6dbe3725767ab071287&v=4" 
+                    />
+                </Flex>
             </Flex>
         </Flex>
     )
